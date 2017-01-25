@@ -18,21 +18,21 @@ ingredients = {
 #function 1 asks what style of drink a customer likes
 def function1 ():
     preferences = {}
-    for flavour in questions:
-        response = input(questions[flavour])
+    for flavor in questions:
+        response = input(questions[flavor])
         if response == "y":
-            preferences[flavour] = "true"
+            preferences[flavor] = "true"
         else:
-            preferences[flavour] = "false"
+            preferences[flavor] = "false"
             
     return preferences
     
 #function 2 constructs the drink
 def function2 (preferences):
     drink = []
-    for flavour in preferences:
-        if preferences[flavour] == "true":
-            drink.append(random.choice(ingredients[flavour]))
+    for flavor in preferences:
+        if preferences[flavor] == "true":
+            drink.append(random.choice(ingredients[flavor]))
     return drink   
 
 #function 3 is the main function
